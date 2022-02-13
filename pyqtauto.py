@@ -45,6 +45,12 @@ class LoginForm(QWidget):
 	def startBot(self,next_time,username,password,url):
 		options = webdriver.ChromeOptions()
 		options.add_experimental_option("detach", True)
+		options.add_argument("--headless")
+		options.add_argument("--disable-gpu")
+		options.add_argument("--no-sandbox")
+		options.add_argument("enable-automation")
+		options.add_argument("--disable-infobars")
+		options.add_argument("--disable-dev-shm-usage")
 		driver = webdriver.Chrome(options=options)
 		driver.get(url)
 		driver.find_element_by_name("username").send_keys(username)
