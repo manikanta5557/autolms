@@ -1,1 +1,1 @@
-web: uvicorn main:app --port $PORT --host 0.0.0.0 
+web: gunicorn --bind :$PORT --workers 1 --threads 2 --timeout 0 python main.py 
