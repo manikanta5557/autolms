@@ -1,1 +1,2 @@
-web: gunicorn --bind :$PORT --workers 1 --threads 2 --timeout 0 python main.py 
+web: python main.py 
+worker: python main.py
