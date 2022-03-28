@@ -44,22 +44,22 @@ def linkopener3():
 				startBot('9:40:01',usrname,passw,ics223)
 				flag=1
 			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('10:50:01',usrname,passw,ics224)
+				startBot('12:00:01',usrname,passw,ics224)
 				flag=1
-			if isNowInTimePeriod('10:50','11:45',timeNow):
-				startBot('12:00:01',usrname,passw,ics221)
+			if isNowInTimePeriod('16:15','17:10',timeNow):
+				startBot(':',usrname,passw,ics221)
 				flag=1
 			if isNowInTimePeriod('12:00','12:55',timeNow):
 				startBot('14:00:01',usrname,passw,ics222)
 				flag=1
 			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot(':',usrname,passw,ics222_lab)
+				startBot('16:00:01',usrname,passw,ics222_lab)
 				flag=1
                 
                 
 		if now.strftime('%A') == 'Tuesday':
-			if isNowInTimePeriod('8:30','9:25',timeNow):
-				startBot('9:40:01',usrname,passw,ics221)
+			if isNowInTimePeriod('16:15','17:10',timeNow):
+				startBot(':',usrname,passw,ics221)
 				flag=1
 			if isNowInTimePeriod('9:40','10:35',timeNow):
 				startBot('10:50:01',usrname,passw,ima221)
@@ -71,7 +71,7 @@ def linkopener3():
 				startBot('14:00:01',usrname,passw,ics222)
 				flag=1
 			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot(':',usrname,passw,ics224_lab)
+				startBot('16:00:01',usrname,passw,ics224_lab)
 				flag=1
                 
                 
