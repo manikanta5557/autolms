@@ -91,7 +91,7 @@ def linkopener3():
 			if isNowInTimePeriod('14:00','16:00',timeNow):
 				startBot(':',usrname,passw,ics225_lab)
 				flag=1
-		if  now.strftime('%A')== 'Saturday':
+		if  now.strftime('%A')== 'Thursday':
 			if isNowInTimePeriod('8:30','9:25',timeNow):
 				startBot('9:40:01',usrname,passw,ics223)
 				flag=1
