@@ -1,11 +1,10 @@
 hello peeps!
-Here is my intresting application that makes you join class on one-click.
-go download autolms.exe 
+Here is my intresting application that makes you join class on one-click everyday without turning your pc on.
 
-INSTRUCTIONS:
-1> enter your LMS credentails in the GUI login page at the startup.
-2> click the button below of your batch 
-Boom! you will join the class if it some class is active at the moment
+Just create an account on Heroku then deploy the above python files, then All set for your autolmsBot.
+
+Please change Lms User name and Password as well.
 
 Under development,stay tuned for more updates!
+
 happy to hear any bugs and issues from your side!
