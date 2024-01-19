@@ -111,10 +111,12 @@ def linkopener3():
 			# 	startBot(':',usrname,passw,ics223_lab)
 			# 	flag=1
 		if  now.strftime('%A')== 'Friday':
+			print("#############   FRIDAY ######################")
 			if isNowInTimePeriod('8:00','8:55',timeNow):
 				startBot('9:00:01',usrname,passw,ioe412)
 				flag=1
 			if isNowInTimePeriod('12:28','12:55',timeNow):
+				print("#############   ics423 ######################")
 				startBot(':',usrname,passw,ics423)
 				flag=1
 			# if isNowInTimePeriod('10:50','11:45',timeNow):
@@ -135,6 +137,7 @@ def startBot(next_time,username,password,url):
 		driver.find_element_by_name("username").send_keys(username)
 		driver.find_element_by_name("password").send_keys(password)
 		driver.find_element_by_id("loginbtn").click()
+		print("#############   STARTING BOT ######################")
 		driver.find_element_by_id("join_button_input").click()
 		#--------------------------------------------------
 		#-------------------------------------------------
