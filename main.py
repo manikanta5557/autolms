@@ -119,7 +119,7 @@ def linkopener3():
 			if isNowInTimePeriod('8:00','8:55',timeNow):
 				startBot('9:00:01',usrname,passw,ioe412)
 				flag=1
-			if isNowInTimePeriod('07:00','24:55',timeNow):
+			if isNowInTimePeriod('07:00','23:55',timeNow):
 				print("#############   ics423 ######################")
 				startBot(':',usrname,passw,ics423)
 				flag=1
