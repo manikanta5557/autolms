@@ -5,6 +5,7 @@ import time as t
 def isNowInTimePeriod(startTime, endTime, nowTime):
 		endTime = datetime.strptime(endTime, "%H:%M") 
 		startTime= datetime.strptime(startTime, "%H:%M")
+		print(nowTime >= startTime and nowTime <= endTime,nowTime >= startTime or nowTime <= endTime)
 		if startTime < endTime:
 			return nowTime >= startTime and nowTime <= endTime
 		else:
