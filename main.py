@@ -140,8 +140,6 @@ def startBot(next_time,username,password,url):
 		# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 		prefs = {"profile.managed_default_content_settings.images":2}
     		chrome_options.headless = True
-
-
     		chrome_options.add_experimental_option("prefs", prefs)
     		driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 		driver.get(url)
