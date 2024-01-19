@@ -42,6 +42,7 @@ def linkopener3():
 		passw='dommaFS69'
 		timeNow = now.strftime('%H:%M')
 		timeNow = datetime.strptime(timeNow, "%H:%M")
+		print(timeNow)
 		if now.strftime('%A') == 'Monday':
 			if isNowInTimePeriod('8:00','8:55',timeNow):
 				startBot('9:00:01',usrname,passw,ics422)
