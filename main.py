@@ -21,18 +21,21 @@ def sleeper(ent):
 		t.sleep(seconds)
 def linkopener3():
 		
-		ima221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3893'
-		ics221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3958'
-		ics222='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3960'
-		ics223='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3964'
-		ics223_lab ='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3964'
-		ics224='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3894'
-		ics224_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3894'
-		ihs221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3896'
-		ihs222='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3897'
-		ics222_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3960'
-		ics225='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3895'
-		ics225_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3895'
+		# ima221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3893'
+		# ics221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3958'
+		# ics222='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3960'
+		# ics223='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3964'
+		# ics223_lab ='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3964'
+		# ics224='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3894'
+		# ics224_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3894'
+		# ihs221='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3896'
+		# ihs222='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3897'
+		# ics222_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3960'
+		# ics225='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3895'
+		# ics225_lab='https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=3895'
+		ics422 = 'https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=9215'
+		ics423 = 'https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=9214'
+		ioe412 = 'https://lms.iiitkottayam.ac.in/mod/bigbluebuttonbn/view.php?id=9219'
 		flag=0
 		now=datetime.now()
 		usrname='2020bcs0030'
@@ -40,86 +43,87 @@ def linkopener3():
 		timeNow = now.strftime('%H:%M')
 		timeNow = datetime.strptime(timeNow, "%H:%M")
 		if now.strftime('%A') == 'Monday':
-			if isNowInTimePeriod('8:30','9:25',timeNow):
-				startBot('9:40:01',usrname,passw,ics223)
+			if isNowInTimePeriod('8:00','8:55',timeNow):
+				startBot('9:00:01',usrname,passw,ics422)
 				flag=1
-			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('12:00:01',usrname,passw,ics224)
+			if isNowInTimePeriod('10:05','12:00',timeNow):
+				startBot(':',usrname,passw,ics423)
 				flag=1
-			if isNowInTimePeriod('16:15','17:10',timeNow):
-				startBot(':',usrname,passw,ics221)
-				flag=1
-			if isNowInTimePeriod('12:00','12:55',timeNow):
-				startBot('14:00:01',usrname,passw,ics222)
-				flag=1
-			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot('16:00:01',usrname,passw,ics222_lab)
-				flag=1
+			# if isNowInTimePeriod('16:15','17:10',timeNow):
+			# 	startBot(':',usrname,passw,ics221)
+			# 	flag=1
+			# if isNowInTimePeriod('12:00','12:55',timeNow):
+			# 	startBot('14:00:01',usrname,passw,ics222)
+			# 	flag=1
+			# if isNowInTimePeriod('14:00','16:00',timeNow):
+			# 	startBot('16:00:01',usrname,passw,ics222_lab)
+			# 	flag=1
                 
                 
 		if now.strftime('%A') == 'Tuesday':
-			if isNowInTimePeriod('16:15','17:10',timeNow):
-				startBot(':',usrname,passw,ics221)
+			if isNowInTimePeriod('8:00','8:55',timeNow):
+				startBot(':',usrname,passw,ics423)
 				flag=1
-			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('10:50:01',usrname,passw,ima221)
-				flag=1
-			if isNowInTimePeriod('10:50','11:45',timeNow):
-				startBot('12:00:01',usrname,passw,ics224)
-				flag=1
-			if isNowInTimePeriod('12:00','12:55',timeNow):
-				startBot('14:00:01',usrname,passw,ics222)
-				flag=1
-			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot('16:00:01',usrname,passw,ics224_lab)
-				flag=1
+			# if isNowInTimePeriod('9:40','10:35',timeNow):
+			# 	startBot('10:50:01',usrname,passw,ima221)
+			# 	flag=1
+			# if isNowInTimePeriod('10:50','11:45',timeNow):
+			# 	startBot('12:00:01',usrname,passw,ics224)
+			# 	flag=1
+			# if isNowInTimePeriod('12:00','12:55',timeNow):
+			# 	startBot('14:00:01',usrname,passw,ics222)
+			# 	flag=1
+			# if isNowInTimePeriod('14:00','16:00',timeNow):
+			# 	startBot('16:00:01',usrname,passw,ics224_lab)
+			# 	flag=1
                 
                 
 		if  now.strftime('%A')== 'Wednesday':
-			if isNowInTimePeriod('8:30','9:25',timeNow):
-				startBot('9:40:01',usrname,passw,ima221)
+			if isNowInTimePeriod('8:00','8:55',timeNow):
+				startBot('9:00:01',usrname,passw,ioe412)
 				flag=1
-			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('10:50:01',usrname,passw,ihs221)
+			if isNowInTimePeriod('9:00','9:55',timeNow):
+				startBot('11:05:01',usrname,passw,ics422)
 				flag=1
-			if isNowInTimePeriod('10:50','11:45',timeNow):
-				startBot('12:00:01',usrname,passw,ics221)
-				flag=1
-			if isNowInTimePeriod('12:00','12:55',timeNow):
-				startBot('14:00:01',usrname,passw,ima221)
-				flag=1
-			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot(':',usrname,passw,ics225_lab)
+			# if isNowInTimePeriod('10:50','11:45',timeNow):
+			# 	startBot('12:00:01',usrname,passw,ics221)
+			# 	flag=1
+			# if isNowInTimePeriod('12:00','12:55',timeNow):
+			# 	startBot('14:00:01',usrname,passw,ima221)
+			# 	flag=1
+			if isNowInTimePeriod('11:05','12:00',timeNow):
+				startBot(':',usrname,passw,ics423)
 				flag=1
 		if  now.strftime('%A')== 'Thursday':
-			if isNowInTimePeriod('8:30','9:25',timeNow):
-				startBot('9:40:01',usrname,passw,ics223)
+			if isNowInTimePeriod('9:00','9:55',timeNow):
+				startBot('10:05:01',usrname,passw,ioe412)
 				flag=1
-			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('10:50:01',usrname,passw,ima221)
+			if isNowInTimePeriod('10:05','11:00',timeNow):
+				startBot(':',usrname,passw,ics422)
 				flag=1
-			if isNowInTimePeriod('10:50','11:45',timeNow):
-				startBot('12:00:01',usrname,passw,ihs222)
-				flag=1
-			if isNowInTimePeriod('12:00','12:55',timeNow):
-				startBot('14:00:01',usrname,passw,ics221)
-				flag=1
-			if isNowInTimePeriod('14:00','16:00',timeNow):
-				startBot(':',usrname,passw,ics223_lab)
-				flag=1
+			# if isNowInTimePeriod('10:50','11:45',timeNow):
+			# 	startBot('12:00:01',usrname,passw,ihs222)
+			# 	flag=1
+			# if isNowInTimePeriod('12:00','12:55',timeNow):
+			# 	startBot('14:00:01',usrname,passw,ics221)
+			# 	flag=1
+			# if isNowInTimePeriod('14:00','16:00',timeNow):
+			# 	startBot(':',usrname,passw,ics223_lab)
+			# 	flag=1
 		if  now.strftime('%A')== 'Friday':
-			if isNowInTimePeriod('8:30','9:25',timeNow):
-				startBot('9:40:01',usrname,passw,ics222)
+			if isNowInTimePeriod('8:00','8:55',timeNow):
+				startBot('9:00:01',usrname,passw,ioe412)
 				flag=1
-			if isNowInTimePeriod('9:40','10:35',timeNow):
-				startBot('10:50:01',usrname,passw,ics224)
+			if isNowInTimePeriod('11:00','11:55',timeNow):
+				startBot(':',usrname,passw,ics423)
 				flag=1
-			if isNowInTimePeriod('10:50','11:45',timeNow):
-				startBot('12:00:01',usrname,passw,ics223)
-				flag=1
-			if isNowInTimePeriod('12:00','12:55',timeNow):
-				startBot(':',usrname,passw,ics225)
-				flag=1
+			# if isNowInTimePeriod('10:50','11:45',timeNow):
+			# 	startBot('12:00:01',usrname,passw,ics223)
+			# 	flag=1
+			# if isNowInTimePeriod('12:00','12:55',timeNow):
+			# 	startBot(':',usrname,passw,ics225)
+			# 	flag=1
+
 def startBot(next_time,username,password,url):
 		chrome_options = webdriver.ChromeOptions()
 		chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
