@@ -3,6 +3,7 @@ from selenium import webdriver
 from datetime import datetime, timedelta ,time
 import time as t
 from selenium.webdriver.common.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 def isNowInTimePeriod(startTime, endTime, nowTime):
 		endTime = datetime.strptime(endTime, "%H:%M") 
 		startTime= datetime.strptime(startTime, "%H:%M")
