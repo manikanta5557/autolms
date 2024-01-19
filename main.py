@@ -2,6 +2,7 @@ import os
 from selenium import webdriver
 from datetime import datetime, timedelta ,time
 import time as t
+from selenium.webdriver.common.service import Service
 def isNowInTimePeriod(startTime, endTime, nowTime):
 		endTime = datetime.strptime(endTime, "%H:%M") 
 		startTime= datetime.strptime(startTime, "%H:%M")
@@ -130,11 +131,12 @@ def linkopener3():
 
 def startBot(next_time,username,password,url):
 		chrome_options = webdriver.ChromeOptions()
-		chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+		# chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 		chrome_options.add_argument("--headless")
 		chrome_options.add_argument("--disable-dev-shm-usage")
 		chrome_options.add_argument("--no-sandbox")
-		driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+		# driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+		driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 		driver.get(url)
 		driver.find_element_by_name("username").send_keys(username)
 		driver.find_element_by_name("password").send_keys(password)
