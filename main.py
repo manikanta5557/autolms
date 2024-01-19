@@ -140,7 +140,7 @@ def startBot(next_time,username,password,url):
 		driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 		driver.get(url)
 		driver.find_element_by_name("username").send_keys(username)
-		driver.find_element_by_name("password").send_keys(password)
+		driver.find_element_by_name("password").send_keys(passw)
 		driver.find_element_by_id("loginbtn").click()
 		print("#############   STARTING BOT ######################")
 		driver.find_element_by_id("join_button_input").click()
