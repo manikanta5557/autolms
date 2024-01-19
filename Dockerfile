@@ -7,7 +7,7 @@ FROM cypress/browsers:latest
 
 
 RUN apt-get install python3 -y
-RUN sudo apt-get install chromium-browser
+RUN apt-get install chromium-browser
 RUN echo $(python3 -m site --user-base)
 
 COPY requirements.txt  .
