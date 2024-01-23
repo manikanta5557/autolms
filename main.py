@@ -1,13 +1,15 @@
 import os
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from datetime import datetime, timedelta ,time
 import time as t
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 def isNowInTimePeriod(startTime, endTime, nowTime):
 		endTime = datetime.strptime(endTime, "%H:%M") 
 		startTime= datetime.strptime(startTime, "%H:%M")
-		print(nowTime >= startTime and nowTime <= endTime,nowTime >= startTime or nowTime <= endTime)
 		if startTime < endTime:
 			return nowTime >= startTime and nowTime <= endTime
 		else:
@@ -45,7 +47,6 @@ def linkopener3():
 		passw='dommaFS69'
 		timeNow = now.strftime('%H:%M')
 		timeNow = datetime.strptime(timeNow, "%H:%M")
-		print(timeNow)
 		if now.strftime('%A') == 'Monday':
 			if isNowInTimePeriod('8:00','8:55',timeNow):
 				startBot('9:00:01',usrname,passw,ics422)
@@ -65,7 +66,7 @@ def linkopener3():
                 
                 
 		if now.strftime('%A') == 'Tuesday':
-			if isNowInTimePeriod('8:00','8:55',timeNow):
+			if isNowInTimePeriod('8:00','18:55',timeNow):
 				startBot(':',usrname,passw,ics423)
 				flag=1
 			# if isNowInTimePeriod('9:40','10:35',timeNow):
@@ -115,12 +116,10 @@ def linkopener3():
 			# 	startBot(':',usrname,passw,ics223_lab)
 			# 	flag=1
 		if  now.strftime('%A')== 'Friday':
-			print("#############   FRIDAY ######################")
 			if isNowInTimePeriod('8:00','8:55',timeNow):
 				startBot('9:00:01',usrname,passw,ioe412)
 				flag=1
-			if isNowInTimePeriod('07:00','23:55',timeNow):
-				print("#############   ics423 ######################")
+			if isNowInTimePeriod('11:00','11:55',timeNow):
 				startBot(':',usrname,passw,ics423)
 				flag=1
 			# if isNowInTimePeriod('10:50','11:45',timeNow):
@@ -131,23 +130,29 @@ def linkopener3():
 			# 	flag=1
 
 def startBot(next_time,username,password,url):
-		chrome_options = webdriver.ChromeOptions()
+		# chrome_options = webdriver.ChromeOptions()
 		# chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-		chrome_options.add_argument("--headless")
-		chrome_options.add_argument("--disable-dev-shm-usage")
-		chrome_options.add_argument("--no-sandbox")
+		# chrome_options.add_argument("--headless")
+		# chrome_options.add_argument("--disable-dev-shm-usage")
+		# chrome_options.add_argument("--no-sandbox")
 		# driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-		# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-		prefs = {"profile.managed_default_content_settings.images":2}
-		chrome_options.headless = True
-		chrome_options.add_experimental_option("prefs", prefs)
-		driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+		options = Options()
+		options.add_argument("start-maximized")
+		options.add_argument("disable-infobars")
+		options.add_argument("--disable-extensions")
+		options.add_argument("--disable-dev-shm-usage")
+		options.add_argument("--no-sandbox")
+		options.add_argument('--headless')
+		options.add_argument('--remote-debugging-port=9222')
+		options.binary_location = "chromium-browser"
+		driver = webdriver.Chrome(options=options)
 		driver.get(url)
-		driver.find_element_by_name("username").send_keys(username)
-		driver.find_element_by_name("password").send_keys(passw)
-		driver.find_element_by_id("loginbtn").click()
-		print("#############   STARTING BOT ######################")
-		driver.find_element_by_id("join_button_input").click()
+		driver.find_element(By.XPATH,"/html/body/div[2]/div[2]/div/div/section/div/div[3]/div/div/div/div/div[2]/form/div[1]/input").send_keys('2020BCS0030')
+		driver.find_element(By.XPATH,"/html/body/div[2]/div[2]/div/div/section/div/div[3]/div/div/div/div/div[2]/form/div[2]/input").send_keys('dommaFS69')
+		# driver.find_element_by_name("password").send_keys("dommaFS69")
+		driver.find_element(By.XPATH,"/html/body/div[2]/div[2]/div/div/section/div/div[3]/div/div/div/div/div[2]/form/button").click()
+		driver.find_element(By.XPATH,"/html/body/div[3]/div[2]/div/div/section/div[1]/div/div/div[2]/span[1]/input").click()
+		# driver.find_element(By.XPATH,"/html/body/div[7]/div/div/div[1]/div/div/span/button[2]").click()
 		#--------------------------------------------------
 		#-------------------------------------------------
 		if next_time==':':
